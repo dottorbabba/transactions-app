@@ -5,6 +5,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class Transaction {
@@ -17,7 +18,7 @@ public class Transaction {
 	private String type;
 
 	private double amount = 0.0;
-
+	@JsonProperty("parent_id")
 	private Long parentId;
 	@JsonIgnore
 	private String path;

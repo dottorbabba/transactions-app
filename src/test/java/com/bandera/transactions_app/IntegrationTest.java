@@ -55,7 +55,7 @@ public class IntegrationTest {
 
 	@Test
 	public void testPutWithNoType() {
-		String requestBody = "{ \"amount\": 400, \"parentId\": 1 }";
+		String requestBody = "{ \"amount\": 400, \"parent_id\": 1 }";
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		HttpEntity<String> requestEntity = new HttpEntity<String>(requestBody, headers);
